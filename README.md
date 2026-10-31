@@ -13,20 +13,24 @@ Write 4 short C programs. Each program reads one integer and writes the result.
 
 1. Accept the assignment. Open your repository.
 2. Click **Code** > **Codespaces** > **Create codespace on main**.
-3. Wait until the codespace is ready. All tools are installed.
+3. Wait until the codespace is ready (1–2 minutes the first time). All tools are installed. You do not need to install anything.
 
-> You can also use VS Code on your computer. Install the **Dev Containers** extension and Docker. Then open the folder and select **Reopen in Container**.
+**Use VS Code on your computer (Windows, macOS or Linux):**
+
+- **Easy way:** Create the codespace (step 2). Then click **Code** > **Codespaces** > **...** > **Open in Visual Studio Code**. The code runs in the codespace. You do not need a compiler on your computer.
+- **Other way:** Clone the repository and open the folder in VS Code. You must have a C compiler (`gcc`) on your computer. Click **Install** when VS Code recommends extensions.
 
 ## How to Run
 
-**Option A:** Open a `.c` file. Press `Ctrl+Shift+B` (Mac: `Cmd+Shift+B`). The program compiles and runs. Type the input in the terminal and press `Enter`.
+**Option A:** Open a `.c` file. Click the **▷** button (top right). The program compiles and runs in the terminal. Type the input and press `Enter`.
 
-**Option B:** Use the terminal:
+**Option B:** Use the terminal. This command compiles and runs `ex1.c`:
 
 ```bash
-make ex1
-./ex1
+make run1
 ```
+
+Use `make run2`, `make run3` and `make run4` for the other exercises.
 
 **Debug:** Open a `.c` file. Press `F5`.
 

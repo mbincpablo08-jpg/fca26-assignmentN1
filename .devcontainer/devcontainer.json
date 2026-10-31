@@ -4,7 +4,8 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-vscode.cpptools"
+        "ms-vscode.cpptools",
+        "formulahendry.code-runner"
       ],
       "settings": {
         "C_Cpp.default.compilerPath": "/usr/bin/gcc"
