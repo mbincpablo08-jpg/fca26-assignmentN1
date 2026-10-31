@@ -30,6 +30,28 @@ make ex1
 
 **Debug:** Open a `.c` file. Press `F5`.
 
+## How to Submit
+
+Run these commands in the terminal:
+
+```bash
+git add .
+git commit -m "Submit assignment 1"
+git push
+```
+
+You can push more than one time. Your last push is your submission.
+
+> **Error: "Make sure you configure your user.name and user.email in git"?**
+> Run these commands one time. Use your name and your GitHub email. Then commit again.
+>
+> ```bash
+> git config --global user.name "Your Name"
+> git config --global user.email "you@example.com"
+> ```
+>
+> **Error: "git is not recognized"?** Install Git from <https://git-scm.com>. Then close and open VS Code again.
+
 ---
 
 ## Exercise 1: Letter Grade (`ex1.c`)
