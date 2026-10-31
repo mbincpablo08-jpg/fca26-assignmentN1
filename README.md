@@ -1,0 +1,82 @@
+# Assignment 1: If-Else and Loops
+
+Write 4 short C programs. Each program reads one integer and writes the result.
+
+## Rules
+
+- Write your code in `ex1.c`, `ex2.c`, `ex3.c` and `ex4.c`.
+- Do not print prompts (for example, `Enter a number:`). Print only the result.
+- Do not change the file names.
+- Commit and push your work before the deadline.
+
+## How to Start
+
+1. Accept the assignment. Open your repository.
+2. Click **Code** > **Codespaces** > **Create codespace on main**.
+3. Wait until the codespace is ready. All tools are installed.
+
+> You can also use VS Code on your computer. Install the **Dev Containers** extension and Docker. Then open the folder and select **Reopen in Container**.
+
+## How to Run
+
+**Option A:** Open a `.c` file. Press `Ctrl+Shift+B` (Mac: `Cmd+Shift+B`). The program compiles and runs. Type the input in the terminal and press `Enter`.
+
+**Option B:** Use the terminal:
+
+```bash
+make ex1
+./ex1
+```
+
+**Debug:** Open a `.c` file. Press `F5`.
+
+---
+
+## Exercise 1: Letter Grade (`ex1.c`)
+
+Read a score. Print the letter grade.
+
+| Score    | Output    |
+|----------|-----------|
+| 90 – 100 | `A`       |
+| 80 – 89  | `B`       |
+| 70 – 79  | `C`       |
+| 60 – 69  | `D`       |
+| 0 – 59   | `F`       |
+| other    | `Invalid` |
+
+| Input | Output    |
+|-------|-----------|
+| `85`  | `B`       |
+| `101` | `Invalid` |
+
+## Exercise 2: FizzBuzz (`ex2.c`)
+
+Read `n` (`n >= 1`). Print the numbers from 1 to `n`, one on each line. Use these replacements:
+
+- If the number divides by 3 and by 5, print `FizzBuzz`.
+- If the number divides by 3 only, print `Fizz`.
+- If the number divides by 5 only, print `Buzz`.
+
+| Input | Output |
+|-------|--------|
+| `5`   | `1`<br>`2`<br>`Fizz`<br>`4`<br>`Buzz` |
+
+## Exercise 3: Sum of Digits (`ex3.c`)
+
+Read `n` (`0 <= n <= 1000000000`). Print the sum of its digits.
+
+| Input  | Output |
+|--------|--------|
+| `123`  | `6`    |
+| `9999` | `36`   |
+
+> Hint: `n % 10` gives the last digit. `n / 10` removes the last digit.
+
+## Exercise 4: Star Triangle (`ex4.c`)
+
+Read `n` (`1 <= n <= 20`). Print a triangle with `n` lines. Line 1 has 1 star, line 2 has 2 stars, and so on.
+
+| Input | Output |
+|-------|--------|
+| `3`   | `*`<br>`**`<br>`***` |
