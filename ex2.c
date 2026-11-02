@@ -1,13 +1,10 @@
-// Exercise 2: FizzBuzz
+// Exercise 2: Harmonic Series
 // See README.md for the task.
 
 #include <stdio.h>
 
 int main(void)
 {
-    int n;
-    scanf("%d", &n);
-
     // Write your code here.
 
     return 0;

@@ -1,13 +1,10 @@
-// Exercise 4: Star Triangle
+// Exercise 4: ASCII Table
 // See README.md for the task.
 
 #include <stdio.h>
 
 int main(void)
 {
-    int n;
-    scanf("%d", &n);
-
     // Write your code here.
 
     return 0;

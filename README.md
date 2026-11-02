@@ -1,11 +1,10 @@
-# Assignment 1: If-Else and Loops
+# Assignment 1 (Lab 3): Loops
 
-Write 4 short C programs. Each program reads one integer and writes the result.
+Write 7 short C programs. Use loops (`for`, `while`, `do-while`) and `if-else`.
 
 ## Rules
 
-- Write your code in `ex1.c`, `ex2.c`, `ex3.c` and `ex4.c`.
-- Do not print prompts (for example, `Enter a number:`). Print only the result.
+- Write your code in `ex1.c` … `ex7.c`.
 - Do not change the file names.
 - Commit and push your work before the deadline.
 
@@ -30,7 +29,7 @@ Write 4 short C programs. Each program reads one integer and writes the result.
 make run1
 ```
 
-Use `make run2`, `make run3` and `make run4` for the other exercises.
+Use `make run2` … `make run7` for the other exercises.
 
 **Debug:** Open a `.c` file. Press `F5`.
 
@@ -58,51 +57,76 @@ You can push more than one time. Your last push is your submission.
 
 ---
 
-## Exercise 1: Letter Grade (`ex1.c`)
+## Exercise 1: Average (`ex1.c`)
 
-Read a score. Print the letter grade.
+1. Read a positive integer `n`.
+2. Read `n` integers.
+3. Print the average of the `n` integers.
 
-| Score    | Output    |
-|----------|-----------|
-| 90 – 100 | `A`       |
-| 80 – 89  | `B`       |
-| 70 – 79  | `C`       |
-| 60 – 69  | `D`       |
-| 0 – 59   | `F`       |
-| other    | `Invalid` |
+**Example:** `n = 5`, numbers `2 4 6 8 10`. Output: `6.4` (= (2+4+6+8+10) / 5).
 
-| Input | Output    |
-|-------|-----------|
-| `85`  | `B`       |
-| `101` | `Invalid` |
+## Exercise 2: Harmonic Series (`ex2.c`)
 
-## Exercise 2: FizzBuzz (`ex2.c`)
+1. Read a positive integer `n`.
+2. Calculate and print H(n) = 1 + 1/2 + 1/3 + … + 1/n.
 
-Read `n` (`n >= 1`). Print the numbers from 1 to `n`, one on each line. Use these replacements:
+**Example:** `n = 3`. Output: `1.83` (= 1 + 1/2 + 1/3).
 
-- If the number divides by 3 and by 5, print `FizzBuzz`.
-- If the number divides by 3 only, print `Fizz`.
-- If the number divides by 5 only, print `Buzz`.
+## Exercise 3: Sum of Positives and Negatives (`ex3.c`)
 
-| Input | Output |
-|-------|--------|
-| `5`   | `1`<br>`2`<br>`Fizz`<br>`4`<br>`Buzz` |
+1. Read integers until the user enters `0`.
+2. Calculate the sum of the positive numbers.
+3. Calculate the sum of the negative numbers.
+4. Print the two sums.
 
-## Exercise 3: Sum of Digits (`ex3.c`)
+**Example:** input `-1 2 4 -3 5 6 1 -8 0`. Output: `18` (= 2+4+5+6+1) and `-12` (= -1-3-8).
 
-Read `n` (`0 <= n <= 1000000000`). Print the sum of its digits.
+## Exercise 4: ASCII Table (`ex4.c`)
 
-| Input  | Output |
-|--------|--------|
-| `123`  | `6`    |
-| `9999` | `36`   |
+Print a table with 26 rows and 4 columns. Each row has a small letter, its ASCII code, the capital letter and its ASCII code. Use a loop.
 
-> Hint: `n % 10` gives the last digit. `n / 10` removes the last digit.
+**Output (start and end):**
 
-## Exercise 4: Star Triangle (`ex4.c`)
+```
+'a' 97   'A' 65
+'b' 98   'B' 66
+'c' 99   'C' 67
+...
+'z' 122  'Z' 90
+```
 
-Read `n` (`1 <= n <= 20`). Print a triangle with `n` lines. Line 1 has 1 star, line 2 has 2 stars, and so on.
+## Exercise 5: Greatest Common Divisor (`ex5.c`)
 
-| Input | Output |
-|-------|--------|
-| `3`   | `*`<br>`**`<br>`***` |
+1. Read two positive integers `x` and `y`.
+2. Calculate the greatest common divisor (gcd) of `x` and `y`.
+3. Print the gcd.
+
+The gcd is the largest integer that divides `x` and `y` with remainder 0.
+
+Use Euclid's method:
+
+1. Let `M` be the larger value and `m` the smaller value.
+2. Calculate `r = M % m`.
+3. If `r == 0`, then `m` is the gcd.
+4. If `r != 0`, set `M = m` and `m = r`. Go back to step 2.
+
+**Example:** `x = 15`, `y = 40`. Steps: `40 % 15 = 10`, `15 % 10 = 5`, `10 % 5 = 0`. Output: `5`.
+
+## Exercise 6: Ascending or Descending (`ex6.c`)
+
+1. Read a positive integer `n`.
+2. Read `n` integers.
+3. Print one message:
+   - `ascending sequence` if each number (after the first) is larger than the previous number.
+   - `descending sequence` if each number (after the first) is smaller than the previous number.
+   - `neither ascending nor descending sequence` in all other cases.
+
+**Example:** `n = 10`, numbers `-2 5 7 13 18 24 40 56 90 137`. Output: `ascending sequence`.
+
+## Exercise 7: Two Largest Values (`ex7.c`)
+
+1. Read an integer `n` (`n >= 2`).
+2. Read `n` real numbers.
+3. Find the two largest numbers. Print them (any order).
+
+**Example:** `n = 9`, numbers `1.5 3.8 14.3 0.0 -2.1 78.1 -5.9 4.4 9.2`. Output: `78.1` and `14.3`.
